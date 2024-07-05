@@ -1,8 +1,11 @@
+import Axios from "./axios";
+
 const Navbar = () => {
 
     return (
         <>
-            <p>HolaHolaHola</p>
+          <p>HolaHolaHola</p>
+          <Axios />
         </>
     );
 };
