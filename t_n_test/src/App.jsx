@@ -3,7 +3,7 @@ import { Badge, Title, Card, Text, Button, Alert, Box } from "@nimbus-ds/compone
 import "@nimbus-ds/styles/dist/index.css";
 import Navbar from "./components/navbar/navbar";
 
-function App() {
+const App = () => {
   const onClickButton = () => {
     alert("hello world!");
   }

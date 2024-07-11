@@ -7,10 +7,13 @@ const client = axios.create({
 
 const Axios = () => {
 const [post, setPost] = React.useState(null);
+const [error, setError] = React.useState(null);
 
 React.useEffect(()=> {
   client.get("/1").then((response) => {
-    setPost(response.data)
+    setPost(response.data);
+  }).catch(error => {
+    setError(error);
   });
 }, []);
 
@@ -30,6 +33,7 @@ async function deletePost() {
     setPost(null);
   }
 
+if (error) return `Error: ${error.message}`;  
 if (!post) return null;
 
     return (
